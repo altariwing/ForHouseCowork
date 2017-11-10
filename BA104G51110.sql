@@ -365,9 +365,9 @@ CREATE SEQUENCE RR_SEQ
 INCREMENT BY 1
 START WITH 1
 NOCACHE;
---------------------------------
---檢舉房仲案件尚未 INSERT 假資料
---------------------------------
+
+INSERT INTO REPORTREALTOR (RR_NO,MEM_NO,RTR_NO,EMP_NO,RR_REASON,RR_RESULT,RR_STATE) VALUES ('RR'||(LPAD(TO_CHAR(RR_SEQ.NEXTVAL),8,'0')),'MB00000002','RT00000001','EM00000002','葦小寶娶太多老婆了，看他不爽。','不能單純看人家不爽就檢舉，直接結案處理','已結案');
+INSERT INTO REPORTREALTOR (RR_NO,MEM_NO,RTR_NO,RR_REASON,RR_STATE) VALUES ('RR'||(LPAD(TO_CHAR(RR_SEQ.NEXTVAL),8,'0')),'MB00000002','RT00000008','張鈞甯都不給人家追，生氣氣!','處理中');
 COMMIT;
 -----------------------------------------------------------------------------YYY---------------------------------
 
