@@ -73,10 +73,10 @@ INCREMENT BY 1
 START WITH 1 
 NOCACHE;
 
-INSERT INTO MEMBER VALUES ('MB'||(LPAD(to_char(MEM_SEQ.NEXTVAL),8,'0')),'stevejobs@gmail.com','123456','賈伯斯','新北市萬里區一條路9號','ON','ON');
-INSERT INTO MEMBER VALUES ('MB'||(LPAD(to_char(MEM_SEQ.NEXTVAL),8,'0')),'michaeljordan@gmail.com','123456','喬丹','台北市內湖區灌籃路168號','ON','ON');
-INSERT INTO MEMBER VALUES ('MB'||(LPAD(to_char(MEM_SEQ.NEXTVAL),8,'0')),'peterwu@gmail.com','123456','彼得吳','台北市大安區中大路8號','ON','ON');
-INSERT INTO MEMBER VALUES ('MB'||(LPAD(to_char(MEM_SEQ.NEXTVAL),8,'0')),'billgates@gmail.com','123456','比爾蓋茲','桃園市中壢區中大路300號','ON','ON');
+INSERT INTO MEMBER (MEM_NO,MEM_ID,MEM_PSW,MEM_NAME,MEM_ADDR,MEM_GAME,SEARCH_STATE,LOCK_STATE) VALUES ('MB'||(LPAD(to_char(MEM_SEQ.NEXTVAL),8,'0')),'stevejobs@gmail.com','123456','賈伯斯','新北市萬里區一條路9號',1,'ON','ON');
+INSERT INTO MEMBER (MEM_NO,MEM_ID,MEM_PSW,MEM_NAME,MEM_ADDR,MEM_GAME,SEARCH_STATE,LOCK_STATE) VALUES ('MB'||(LPAD(to_char(MEM_SEQ.NEXTVAL),8,'0')),'michaeljordan@gmail.com','123456','喬丹','台北市內湖區灌籃路168號',1,'ON','ON');
+INSERT INTO MEMBER (MEM_NO,MEM_ID,MEM_PSW,MEM_NAME,MEM_ADDR,MEM_GAME,SEARCH_STATE,LOCK_STATE) VALUES ('MB'||(LPAD(to_char(MEM_SEQ.NEXTVAL),8,'0')),'peterwu@gmail.com','123456','彼得吳','台北市大安區中大路8號',1,'ON','ON');
+INSERT INTO MEMBER (MEM_NO,MEM_ID,MEM_PSW,MEM_NAME,MEM_ADDR,MEM_GAME,SEARCH_STATE,LOCK_STATE) VALUES ('MB'||(LPAD(to_char(MEM_SEQ.NEXTVAL),8,'0')),'billgates@gmail.com','123456','比爾蓋茲','桃園市中壢區中大路300號',1,'ON','ON');
 
 
 ------------ 房仲公司 --------------
