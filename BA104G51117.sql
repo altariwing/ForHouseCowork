@@ -159,14 +159,14 @@ INCREMENT BY 1
 START WITH 1
 NOCACHE;
 
-INSERT INTO SELLER(SLR_NO, SLR_NAME, SLR_TAXID, SLR_ID, SLR_PSW, SLR_CONTACT, SLR_PHONE, SLR_STATE)
-VALUES('SL'||(LPAD(TO_CHAR(SLR_SEQ.NEXTVAL),8,'0')), '宜家家居', '84309586', 'sales@ikea.com', '123456', '李協達', '84128869', 'ON');
-INSERT INTO SELLER(SLR_NO, SLR_NAME, SLR_TAXID, SLR_ID, SLR_PSW, SLR_CONTACT, SLR_PHONE, SLR_STATE)
-VALUES('SL'||(LPAD(TO_CHAR(SLR_SEQ.NEXTVAL),8,'0')), '歐德傢俱', '70394175', 'sales@order.com', '123456', '陳國都', '0800033988', 'ON');
-INSERT INTO SELLER(SLR_NO, SLR_NAME, SLR_TAXID, SLR_ID, SLR_PSW, SLR_CONTACT, SLR_PHONE, SLR_STATE)
-VALUES('SL'||(LPAD(TO_CHAR(SLR_SEQ.NEXTVAL),8,'0')), '特力屋', '89390488', 'sales@hola.com.tw', '123456', '何湯雄', '87915566', 'ON');
-INSERT INTO SELLER(SLR_NO, SLR_NAME, SLR_TAXID, SLR_ID, SLR_PSW, SLR_CONTACT, SLR_PHONE, SLR_STATE)
-VALUES('SL'||(LPAD(TO_CHAR(SLR_SEQ.NEXTVAL),8,'0')), '詩肯柚木', '89403884', 'sales@scanteak.com', '123456', '林福勤', '03-3180555', 'ON');
+INSERT INTO SELLER(SLR_NO, SLR_NAME, SLR_TAXID, SLR_ID, SLR_PSW, SLR_CONTACT, SLR_PHONE, SLR_STATE, SLR_INTRO)
+VALUES('SL'||(LPAD(TO_CHAR(SLR_SEQ.NEXTVAL),8,'0')), '宜家家居', '84309586', 'sales@ikea.com', '123456', '李協達', '84128869', 'ON', 'IKEA的願景是為大多數人創造更美好的生活，我們的產品與設計都遵守大眾化設計的五大要素：形式、功能、品質、永續發展及價格，讓每項產品擁有優良品質的同時，花小錢就能帶回家。');
+INSERT INTO SELLER(SLR_NO, SLR_NAME, SLR_TAXID, SLR_ID, SLR_PSW, SLR_CONTACT, SLR_PHONE, SLR_STATE, SLR_INTRO)
+VALUES('SL'||(LPAD(TO_CHAR(SLR_SEQ.NEXTVAL),8,'0')), '歐德傢俱', '70394175', 'sales@order.com', '123456', '陳國都', '0800033988', 'ON', '歐德傢俱連鎖事業在台服務超過20年，專心致力於室內設計與研發，設計生產來自於德國，義大利同步的德式廚櫃，提供機能與美學的現代傢俱，更在2011年創立了新品牌優渥實木，將北歐風的實木家具引進台灣。');
+INSERT INTO SELLER(SLR_NO, SLR_NAME, SLR_TAXID, SLR_ID, SLR_PSW, SLR_CONTACT, SLR_PHONE, SLR_STATE, SLR_INTRO)
+VALUES('SL'||(LPAD(TO_CHAR(SLR_SEQ.NEXTVAL),8,'0')), '特力和樂', '89390488', 'sales@hola.com.tw', '123456', '何湯雄', '87915566', 'ON', '家，是心之歸屬，實現所有愛家人的夢想家園，提倡「居家生活美學」是HOLA耕耘居家用品市場的期許，每個生活相處時刻，都是令人期待的歡欣雀躍，隨時為家補給最好的溫暖能量。');
+INSERT INTO SELLER(SLR_NO, SLR_NAME, SLR_TAXID, SLR_ID, SLR_PSW, SLR_CONTACT, SLR_PHONE, SLR_STATE, SLR_INTRO)
+VALUES('SL'||(LPAD(TO_CHAR(SLR_SEQ.NEXTVAL),8,'0')), '詩肯柚木', '89403884', 'sales@scanteak.com', '123456', '林福勤', '03-3180555', 'ON', '在詩肯柚木，我們力求家俱設計精美而又經久耐用。我們的創始靈感來自北歐丹麥，注重簡約的設計以及家俱的實用性。詩肯柚木一貫的理念，是要為繁忙的都市人營造一個舒適的居住空間。我們深信，擁有自然優美光澤和紋理的柚木，配搭簡約的家具設計，可為現代都市人打造出最完美的居家環境。');
 
 
 -------------- 商品類別 --------------
