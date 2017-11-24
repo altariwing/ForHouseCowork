@@ -528,6 +528,116 @@ ARTICLE_STATE VARCHAR2(30) NOT NULL,
 CONSTRAINT FK_ARTICLE_REALTOR FOREIGN KEY (RTR_NO) REFERENCES REALTOR(RTR_NO)
 );
 
+
+--文章---------------------------------------------------------------------------
+CREATE SEQUENCE SEQ_ART
+INCREMENT BY 1
+START WITH 8000
+NOMAXVALUE
+NOCYCLE
+NOCACHE;
+
+
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000001', '父親節剛過完，又要帶客人去抄別人家了，鰲拜這個大壞蛋', TO_DATE('20170811', 'YYYY-MM-DD'), 'ON', '真的是壞蛋');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000002', '今天真的是愉快得一天!', TO_DATE('20170910', 'YYYY-MM-DD'), 'ON', '恭禧');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000003', '全家有代言的衣服好好看喔，看房子也不要忘記穿衣服', TO_DATE('20171110', 'YYYY-MM-DD'), 'ON', '愛愛惹人愛');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000004', '今天一位太太說，想找有箭一直插.....在佛像上面裝飾的房子，真的很久沒有遇到妖尼姑了，還真的當我什麼都找的到', TO_DATE('20171103', 'YYYY-MM-DD'), 'ON', '笨笨');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000005', '下面一位~~', TO_DATE('20171015', 'YYYY-MM-DD'), 'ON', '先抱一下');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000001', '神龍教主教我幫忙找房子，不然又要給我「我愛一條柴了」', TO_DATE('20171030', 'YYYY-MM-DD'), 'ON', '好累');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000005', '下面一位~~', TO_DATE('20170923', 'YYYY-MM-DD'), 'ON', '再抱一下');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000006', '真的是沒事不要找事，最近又有新的場館開了，要帶的請歡迎!', TO_DATE('20171026', 'YYYY-MM-DD'), 'ON', '好');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000007', '謝謝你出現在我的青春里。大平台...', TO_DATE('20171102', 'YYYY-MM-DD'), 'ON', '不客氣');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000008', '送大南瓜', TO_DATE('20171027', 'YYYY-MM-DD'), 'ON', '不好吃');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000001', '好懷念大小雙七期，真的有心電感應', TO_DATE('20170910', 'YYYY-MM-DD'), 'ON', '我也超愛');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000002', '裝扮就送大南瓜', TO_DATE('20170912', 'YYYY-MM-DD'), 'ON', '要吃幾顆');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000003', '就愛阿蓋', TO_DATE('20171012', 'YYYY-MM-DD'), 'ON', '真的我也愛');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000004', '就送大南瓜', TO_DATE('20171113', 'YYYY-MM-DD'), 'ON', '種瓜得瓜');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000005', '下面一位~~', TO_DATE('20170815', 'YYYY-MM-DD'), 'ON', '抱一下');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000001', '南瓜有裝扮就送大南瓜', TO_DATE('20170815', 'YYYY-MM-DD'), 'ON', 'ㄎㄎ');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000005', '下面一位~~', TO_DATE('20170918', 'YYYY-MM-DD'), 'ON', '抱一下');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000006', '裝扮就送大南瓜', TO_DATE('20171005', 'YYYY-MM-DD'), 'ON', 'ㄎㄎ');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000007', '麻醬麵，麻醬和面要分開。但客人跟房子不能分開!', TO_DATE('20171113', 'YYYY-MM-DD'), 'ON', '腿也開開');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000008', '美美der', TO_DATE('20171207', 'YYYY-MM-DD'), 'ON', 'Yes');
+
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000001', '今天真得很累，還要去反清復明，帶客人去看台北天地會總處。還不買= =', TO_DATE('20170810', 'YYYY-MM-DD'), 'ON', '42章經');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000002', '我有熱忱，但沒有能力QQ，今年又要休息了', TO_DATE('20170910', 'YYYY-MM-DD'), 'ON', '球球');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000003', '超級漂亮，就是最美的，阿蓋的最愛', TO_DATE('20171010', 'YYYY-MM-DD'), 'ON', '阿蓋棒棒');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000004', '誰再敢說武當七期不好，我馬上叫我孫子帶領魔教攻上他家', TO_DATE('20171110', 'YYYY-MM-DD'), 'ON', '我愛小招');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000005', '讓我們歡迎，下面一位~', TO_DATE('20171024', 'YYYY-MM-DD'), 'ON', '抱一下');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000006', '當房仲就像是格鬥一樣，都是自己的興趣', TO_DATE('20170810', 'YYYY-MM-DD'), 'ON', '打');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000006', '最近很久沒有深蹲了，不要再偷拿走花生球跟彈力帶了', TO_DATE('20170910', 'YYYY-MM-DD'), 'ON', '真的很久');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000004', '現在只要帶客人看很久，我都會回想起閉關那美好時光', TO_DATE('20171010', 'YYYY-MM-DD'), 'ON', '每天早上都還是一柱');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000007', '沒有什麼，就只有大! 平! 台!', TO_DATE('20171117', 'YYYY-MM-DD'), 'ON', '平台~');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000008', '我就是美美的~', TO_DATE('20171005', 'YYYY-MM-DD'), 'ON', '美');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000009', '最近要拍影片，都順便找客人幫我掌鏡', TO_DATE('20170810', 'YYYY-MM-DD'), 'ON', '邊緣');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000010', '球來就打! 但我要的是客人阿!!', TO_DATE('20170910', 'YYYY-MM-DD'), 'ON', '客人喔');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000011', '各位阿，不要再讓政府欺負我們了', TO_DATE('20171010', 'YYYY-MM-DD'), 'ON', '不要生氣氣');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000012', '鋼鐵鋼鐵', TO_DATE('20171113', 'YYYY-MM-DD'), 'ON', '兒子帥');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000011', '螢幕上累積的獎金，可能就是你的喔', TO_DATE('20171101', 'YYYY-MM-DD'), 'ON', '進行獎金挑戰賽');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000010', '球來，這次先不打~', TO_DATE('20170814', 'YYYY-MM-DD'), 'ON', '不打，出局');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000005', '下面一位~', TO_DATE('20170907', 'YYYY-MM-DD'), 'ON', '抱一下');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000006', '沒有客人，大平台', TO_DATE('20171012', 'YYYY-MM-DD'), 'ON', '評');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000001', '就送大南瓜', TO_DATE('20171121', 'YYYY-MM-DD'), 'ON', 'ㄎㄎ');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000008', '拍拍ㄆㄥ胚', TO_DATE('20170930', 'YYYY-MM-DD'), 'ON', 'MiFaSo魔女');
+INSERT INTO ARTICLE (Article_No, Rtr_No, Article_body, Post_date, Article_State, ARTICLE_COMM)
+VALUES('ART'||LPAD(TO_CHAR(SEQ_ART.NEXTVAL), 7, '0'), 'RT00000007', '以後我叫劉德華唱給你聽!但，大平台~', TO_DATE('20171110', 'YYYY-MM-DD'), 'ON', '華哥');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 CREATE TABLE FOLLOW_RTR(
 RTR_NO VARCHAR2(10)NOT NULL ,
 MEM_NO VARCHAR2(10)NOT NULL ,
