@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="BA104G5.ver2.0.9">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes/" source-path="/ImportedClasses"/>
+        <property name="context-root" value="BA104G5.ver2.0.9"/>
+        <property name="java-output-path" value="/BA104G5.ver2.0.9/build/classes"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,26 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="Big5"%>
+
+
+	<div class="row">
+		<ul class="pager">	
+		
+  <%if (rowsPerPage<rowNumber) {%>
+        <li><A href="<%=request.getContextPath()%>/house/houseServlet.do?whichPage=1&para=${para}&sortedCondition=${sortedCondition}&action=${action}">至第一頁</A><li>
+        <li><A href="<%=request.getContextPath()%>/house/houseServlet.do?whichPage=<%=(whichPage==1)?1:(whichPage-1)%>&para=${para}&sortedCondition=${sortedCondition}&action=${action}">上一頁 </A><li>
+  
+
+	<% for(int i = pagerSrt;i<=pagerEnd;i++) { %>
+			<li>
+			<a href="<%=request.getContextPath()%>/house/houseServlet.do?whichPage=<%= i %>&para=${para}&sortedCondition=${sortedCondition}&action=${action}" <%= (whichPage==i)?"style='background-color:#dddddd'":"" %> ><%= i %>
+			
+			</a>
+			</li>
+	<% }; %>
+  
+       <li> <A href="<%=request.getContextPath()%>/house/houseServlet.do?whichPage=<%=(whichPage==pageNumber)?pageNumber:(whichPage+1)%>&para=${para}&action=${action}&sortedCondition=${sortedCondition}">下一頁 </A></li>
+       <li> <A href="<%=request.getContextPath()%>/house/houseServlet.do?whichPage=<%=pageNumber%>&para=${para}&action=${action}&sortedCondition=${sortedCondition}">至最後一頁</A></li>
+ 
+  <%}%>    
+  		</ul>
+	</div>
+

@@ -1,0 +1,31 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<div class="col-sm-12">
+  <%if (rowsPerPage<rowNumber) {%>
+    <%if(pageIndex>=rowsPerPage){%>
+        <A href="<%=request.getRequestURI()%>?whichPage=<%=whichPage-1%>" class="text-uppercase pull-left"><i class="iline1-arrowhead2"></i>上一則</A>
+    <%}%>
+    <%if(pageIndex<pageIndexArray[pageNumber-1]){%>
+        <A href="<%=request.getRequestURI()%>?whichPage=<%=whichPage+1%>" class="text-uppercase pull-right">下一則<i class="iline1-chevron15"></i></A>
+    <%}%>
+  <%}%>  
+
+<br><br>
+</div>
+
+<div class="col-sm-12 col-sm-6 col-sm-offset-3">
+
+
+<%if (pageNumber>1) {%>
+    <FORM METHOD="post" ACTION="<%=request.getRequestURI()%>"  style="text-align:center;">   
+       <select size="1" name="whichPage">
+         <%for (int i=1; i<=pageNumber; i++){%>
+            <option value="<%=i%>">至第<%=i%>頁
+         <%}%> 
+       </select>
+       <input type="submit" value="確定" >  
+    </FORM>
+  <%}%>
+
+
+
+</div>

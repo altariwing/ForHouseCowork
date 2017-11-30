@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, Verdana, Helvetica, "LiHei Pro Medium", ·L³n¥¿¶ÂÅé, sans-serif;
+}
+
+.navbar {
+    background-color: #ffffff;
+    margin-bottom: 0;
+    border-radius: 0;
+    height: 80px;
+    box-shadow: 0px 2px 1px #bdbdbd;
+}
+
+.navshadow {
+    box-shadow: 0px 2px 1px #bdbdbd;
+}
+
+.activebar>li>a {
+    background-color: #ffffff;
+    font-size: 22px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    height: 80px;
+}
+
+.logina>li>a {
+    background-color: #ffffff;
+    padding-top: 2em;
+    padding-bottom: 0px;
+    height: 80px;
+}
+
+.backgroundpng {
+    position: fixed;
+    top: 0;
+    z-index: -15;
+}
+
+.backgroundpng img {
+    width: 115%;
+    opacity: 0.9;
+}
+
+.form-control {
+    height: 38.4px;
+    border-radius: 0px;
+}
+
+.searchbar {
+    position: absolute;
+    top: 21em;
+}
+
+.search-filter {
+    height: 38.4px;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+}
+
+.search-form-btn {
+    color: #fff;
+    background: #231f20;
+    border: none;
+    height: 38.4px;
+    border-radius: 0 3px 3px 0;
+    width: calc(60px);
+}
+
+.navbar-brand {
+    z-index: 20;
+}
+
+.navbar-brand img {
+    background-color: #FFF;
+    border-radius: 15px;
+}
+
+.tooltip-inner {
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 0px;
+}
+
+.input-group-btn:last-child>.btn,
+.input-group-btn:last-child>.btn-group {
+    padding-top: 0.7em;
+}
+
+a:hover {
+    text-decoration-line: none;
+}
+
+a:active {
+    text-decoration-line: none;
+}
+
+a:visited {
+    text-decoration-line: none;
+}
+
+.main {
+    padding-bottom: 50px;
+}
+
+.copyri {
+    margin-top: 3em;
+}

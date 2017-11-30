@@ -1,0 +1,125 @@
+@CHARSET "UTF-8";
+
+.table_main { 
+	border: 2px solid #A9A9A9;
+	font-family: Microsoft JhengHei;
+	font-weight: bold;
+}
+
+.cooper_promo, .cooper_house, .cooper_ann {
+	/* 	margin-top: 9em; */
+	
+}
+
+/*大促銷標題*/
+.title_pr {
+	color: green;
+	font-size: xx-large;
+}
+
+/*欄未標題*/
+.col_title {
+	color: #008000;
+	background-color: #A9A9A9;
+	font-size: 20px;
+	background-color: #A9A9A9;
+}
+
+/*欄位內容*/
+.col_name {
+	font-size: 16px;
+}
+
+.modal_jump {
+	font-family: Microsoft JhengHei;
+	font-weight: bold;
+}
+
+/*彈窗位置*/
+.modal_jump {
+	float: right;
+}
+
+/*彈窗標題*/
+.modal-title {
+	color: #008000;
+	font-size: x-large;
+}
+
+.modal-body {
+	color: #A9A9A9;
+	font-size: medium;
+}
+
+.date_size {
+	width: 100%;
+}
+
+/* 為了不讓超連結改變顏色 */
+.cooper_ann_href {
+	color: white;
+}
+
+/* 專門為按鈕寫的 */
+.btn.focus, .btn:focus, .btn:hover {
+	color: #FFFFFF;
+}
+
+.btn_cooper {
+	color: #FFFFFF;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	background-color: #4CAF50;
+	border: none;
+	border-radius: 7px;
+	box-shadow: 0 2px #999;
+}
+
+.btn_cooper:hover {
+	background-color: #368D25;
+}
+
+.btn_cooper:active {
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+/* end_專門為按鈕寫的 */
+
+/* 專門為抓到要update的值設字的顏色 */
+.update_color {
+	color: red;
+	font-family: Microsoft JhengHei;
+	font-weight: bold;
+}
+
+.modal-body {
+	color: black;
+	font-family: Microsoft JhengHei;
+	font-weight: bold;
+}
+
+/* 專門為了為抓到的update表格尺寸 */
+.form_ann {
+	border: 1px solid #909090;
+	box-shadow: 0 2px 10px #000005;
+	border-radius: 6px;
+}
+/* 為了刪除彈窗做的 */
+.model_delete_title {
+	background-color: #FF9797;
+	color: black;
+}
+
+
+/* 促銷修改照片預覽 */
+#imgpreview, 
+.promo_photo,
+.mews_photo {
+	width: 50%;
+	height: 291.2px;
+}
+

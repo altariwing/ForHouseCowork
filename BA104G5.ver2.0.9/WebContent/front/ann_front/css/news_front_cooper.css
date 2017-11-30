@@ -1,0 +1,19 @@
+#cooper_footer {
+	max-height: 173px;
+    font-weight: 700;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+}
+
+#main_cooper {
+    padding-bottom: 0;
+}
+
+.from_internet::before {
+    content: "¤@";
+}
+
+a {
+    color: #00ADEE;
+}
