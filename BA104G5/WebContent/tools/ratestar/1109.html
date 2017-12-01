@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Title Page</title>
+    <link rel="stylesheet" href="./jquery.rateyo.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript" src="./jquery.rateyo.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var rating = 1.6;
+
+        $(".counter").text(rating);
+
+        $(".raten").rateYo({
+            rating: rating,
+            numStars: 5,
+            precision: 2,
+            starWidth: "30px",
+            spacing: "5px",
+            //readOnly: true,
+            multiColor: {
+
+                startColor: '#ffbf00',
+                endColor: "#ffff00"
+            }
+            // onInit: function () {
+
+            //   console.log("On Init");
+            // },
+            // onSet: function () {
+            //   readOnly: true
+            // }
+        });
+        var j = 0;
+
+        $(".raten").on("rateyo.set", function(e, data) {
+
+            sumRate(print);
+
+        });
+
+
+
+        function print() {
+            $("#ratensum").text(parseInt(j / 25 * 100) + "%");
+        }
+
+        function sumRate(e) {
+            j = 0;
+            $.each($(".raten"), function(index, value) {
+                j += $(value).rateYo("rating");
+                e();
+            });
+        }
+
+
+        $(".aa").click(function(){
+          $(".raten").rateYo("option", "readOnly", true);
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <table class="table table-hover text-center">
+            <thead>
+                <tr>
+                    <th>總價</th>
+                    <th>坪數</th>
+                    <th>管理</th>
+                    <th>公共設施</th>
+                    <th>格局</th>
+                    <th>滿意度</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr >
+                    <td>
+                        <div class="raten"></div>
+                    </td>
+                    <td>
+                        <div class="raten"></div>
+                    </td>
+                    <td>
+                        <div class="raten"></div>
+                    </td>
+                    <td>
+                        <div class="raten"></div>
+                    </td>
+                    <td>
+                        <div class="raten"></div>
+                    </td>
+                    <td>
+                        <div id="ratensum"></div>
+                    </td>
+                    <td>
+                        <div class="btn-group aa">
+                            <a href="#" class="btn btn-primary" role="button">確定修改</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

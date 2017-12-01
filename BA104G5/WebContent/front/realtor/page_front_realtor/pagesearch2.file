@@ -1,0 +1,28 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<div class="text-center">
+		<ul class="pagination pagination-lg">
+  <%if (rowsPerPage<rowNumber) {%>
+    <%if(pageIndex>=rowsPerPage){%>
+        <li><A href="<%=request.getContextPath()%>/front/realtor/realtor.do?action=query&whichPage=1">&laquo;</A></li>
+        <li><A href="<%=request.getContextPath()%>/front/realtor/realtor.do?action=query&whichPage=<%=whichPage-1%>">上一頁 </A></li>
+    <%}%>
+  
+    <%if(pageIndex<pageIndexArray[pageNumber-1]){%>
+        <li><A href="<%=request.getContextPath()%>/front/realtor/realtor.do?action=query&whichPage=<%=whichPage+1%>">下一頁 </A></li>
+        <li><A href="<%=request.getContextPath()%>/front/realtor/realtor.do?action=query&whichPage=<%=pageNumber%>">>&raquo;</A></li>
+    <%}%>
+  <%}%>  
+		</ul>
+	</div>
+
+<br><br>
+
+
+
+<%= request.getParameter("action")%>
+<%= request.getParameter("RE_NO")%>
+
+
+
+
+http://localhost:8081/BA104G5/front/realtor/realtor.do?action=listRealtor_ByCompositeQuery&RE_NO=RE00000002&whichPage=2

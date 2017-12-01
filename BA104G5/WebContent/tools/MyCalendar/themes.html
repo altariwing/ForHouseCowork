@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link href='css/fullcalendar.min.css' rel='stylesheet' />
+<link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src='js/moment.min.js'></script>
+<script src='js/jquery.min.js'></script>
+<script src='js/fullcalendar.min.js'></script>
+<script src='js/theme-chooser.js'></script>
+<script src='js/zh-tw.js'></script>
+
+<script>
+
+	$(document).ready(function() {
+
+		initThemeChooser({
+
+			init: function(themeSystem) {
+				$('#calendar').fullCalendar({
+					themeSystem: themeSystem,
+					locale: 'zh-tw',
+					// eventOverlap: false,
+					header: {
+						left: 'prev',
+						center: 'title',
+						right: 'today,month,agendaDay,listMonth,next'
+					},
+					defaultDate: new Date(),
+					weekNumbers: true,
+					navLinks: true, // can click day/week names to navigate views
+					editable: true,
+					eventLimit: true,// allow "more" link when too many events
+					
+					events: [
+						{
+							title: 'All Day Event',
+							start: '2017-10-01'
+						},
+						{
+							title: 'Long Event',
+							start: '2017-10-07',
+							end: '2017-10-10'
+						},
+						{
+							id: 999,
+							title: 'Repeating Event',
+							start: '2017-10-09T16:00:00'
+						},
+						{
+							id: 999,
+							title: 'Repeating Event',
+							start: '2017-10-16T16:00:00'
+						},
+						{
+							title: 'Conference',
+							start: '2017-10-11',
+							end: '2017-10-13'
+						},
+						{
+							title: 'Meeting',
+							start: '2017-10-12T10:30:00',
+							end: '2017-10-12T12:30:00'
+						},
+						{
+							title: 'Lunch',
+							start: '2017-10-12T12:00:00'
+						},
+						{
+							title: 'Meeting',
+							start: '2017-10-12T14:30:00'
+						},
+						{
+							title: 'Happy Hour',
+							start: '2017-10-12T17:30:00'
+						},
+						{
+							title: 'Dinner',
+							start: '2017-10-12T20:00:00'
+						},
+						{
+							title: 'Birthday Party',
+							start: '2017-10-13T07:00:00'
+						},
+						{
+							title: 'Click for Google',
+							url: 'http://google.com/',
+							start: '2017-10-28'
+						}
+					]
+				});
+			},
+
+			change: function(themeSystem) {
+				$('#calendar').fullCalendar('option', 'themeSystem', themeSystem);
+			}
+
+		});
+
+	});
+
+</script>
+<style>
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-size: 14px;
+	}
+
+	#top,
+	#calendar.fc-unthemed {
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+	}
+
+	#top {
+		background: #eee;
+		border-bottom: 1px solid #ddd;
+		padding: 0 10px;
+		line-height: 40px;
+		font-size: 12px;
+		color: #000;
+	}
+
+	#top .selector {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	#top select {
+		font: inherit; /* mock what Boostrap does, don't compete  */
+	}
+
+	.left { float: left }
+	.right { float: right }
+	.clear { clear: both }
+
+	#calendar {
+		max-width: 900px;
+		margin: 40px auto;
+		padding: 0 10px;
+	}
+
+</style>
+</head>
+<body>
+
+	<div id='calendar'></div>
+
+</body>
+</html>
