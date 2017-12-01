@@ -1,0 +1,25 @@
+# compiled 
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# eclipse
+.classpath
+.project
+.settings
